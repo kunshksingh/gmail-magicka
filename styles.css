@@ -1,0 +1,16 @@
+.reply-button {
+    background: linear-gradient(90deg, rgba(110,74,123,0.2) 0%, rgba(56, 160, 239,0.2) 100%)!important; 
+    border: none;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 6px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1)!important;
+    transition: all 0.3s ease; 
+    cursor: pointer; 
+
+  }
+  
+  .reply-button:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  }
+  

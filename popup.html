@@ -1,0 +1,45 @@
+<!-- Chrome extension, include enable and disable
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Popup</title>
+    <link rel="stylesheet" type="text/css" href="css/popup.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Assistant</h1>
+        <div class="content">
+            <p>Enable/Disable Assistant</p>
+            <button id="enable">Enable</button>
+            <button id="disable">Disable</button>
+        </div>
+    </div>
+    <script src="js/popup.js"></script>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Extension Options</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@^2.0/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 flex items-center justify-center h-screen min-w-96">
+    <div class="bg-white p-8 rounded-lg shadow-lg max-w-md w-full">
+        <h1 class="text-xl font-bold mb-4">Talkbud Settings</h1>
+        <form id="settings-form">
+            <div class="mb-4">
+                <label for="apiKey" class="block text-sm font-medium text-gray-700">API Key</label>
+                <input type="text" id="apiKey" name="apiKey" class="mt-1 block px-3 py-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" placeholder="Enter your API key">
+            </div>
+            
+            <button type="submit" class="w-full bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                Save
+            </button>
+        </form>
+    </div>
+    <script src="options.js"></script>
+</body>
+</html>

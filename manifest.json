@@ -1,0 +1,30 @@
+
+{
+    "manifest_version": 3,
+    "name": "Reply with Talkbud",
+    "version": "0.1.1",
+    "description": "Add a magical reply button to Gmail and generate responses with AI.",
+    "permissions": ["activeTab", "storage"],
+    "host_permissions": [
+        "*://mail.google.com/*"
+    ],
+    "background": {
+        "service_worker": "background.js"
+    },
+    "action": {
+        "default_popup": "popup.html",
+        "default_icon": "icon.png"
+    },
+    "icons": {
+        "16": "icon-16.png",
+        "64": "icon-64.png",
+        "128": "icon-128.png"
+    },
+    "content_scripts": [{
+        "matches": ["*://mail.google.com/*"],
+        "js": ["gmailContentScript.js"],
+        "css": ["styles.css"],
+        "run_at": "document_idle"
+    }],
+    "options_page": "options.html"
+}
