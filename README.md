@@ -3,9 +3,12 @@
 
 # How to use
 
-Step 1: Clone repository
+Step 1: Clone repository 
+
 Step 2: Navigate to chrome://extensions/ and click 'Load Unpacked' (top left)
+
 Step 3: Navigate to the root of the repository and hit select or confirm
+
 Step 4: Pin the extension and click: you should be able to insert your OpenAI API Key
 
 
