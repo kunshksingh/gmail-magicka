@@ -5,7 +5,9 @@
 
 Step 1: Clone repository 
 
-Step 2: Navigate to chrome://extensions/ and click 'Load Unpacked' (top left)
+Step 2: Navigate to chrome://extensions/ and ensure "Developer Mode" is on (top right)
+
+Step 3: Click 'Load Unpacked' (top left) 
 
 Step 3: Navigate to the root of the repository and hit select or confirm
 
