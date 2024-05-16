@@ -25,10 +25,17 @@ Testing:
 * Add continuous integration/automated testing
 
 Deployment:
-* Put onto extensions store
+* Put onto chrome extensions store
 
 Drafting emails:
 * Auto-generate new emails
+* Fix bugs when retrieving context
+* Improve prompt/chain-of-thought reasoning/generation quality
+* Perform artificial feedback on GPT-4o's responses with GPT-4o or a different LLM 
+* Ensure a response is generated, and filter out bad responses (ties with previous bullet)
+
+Browsers:
+* Expand to Edge/Opera/Firefox/misc
 
 
 # Inspiration
