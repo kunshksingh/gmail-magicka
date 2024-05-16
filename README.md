@@ -9,9 +9,9 @@ Step 2: Navigate to chrome://extensions/ and ensure "Developer Mode" is on (top 
 
 Step 3: Click 'Load Unpacked' (top left) 
 
-Step 3: Navigate to the root of the repository and hit select or confirm
+Step 4: Navigate to the root of the repository and hit select or confirm
 
-Step 4: Pin the extension and click: you should be able to insert your OpenAI API Key
+Step 5: Pin the extension and click on it: you should be able to insert your OpenAI API Key
 
 
 # Open Source
