@@ -142,10 +142,15 @@ function expandEmailItems() {
 async function generateReply(emailThreadData, user_input) {
     //const name = "Kunsh Singh" //TODO: Make this dynamic to the user's actual name in storage!
     chrome.storage.sync.get('userName', function(data){
-        if(data.Name){
+        if(data.userName){
             userName = data.userName;
         }
     });
+    if (!userName) {
+        console.error('Nane not found!');
+        alert('Please specify your name in extension settings');
+        return;
+    }
 
     const email = JSON.stringify(emailThreadData);
     const systemPrompt = "You are loved. You are given the following email thread:\n\n"+email+"\nAs "+userName+", reply to the following email thread! Match the tone of voice you've used in the conversation and your intent. Finally and most importantly, the user will provide text for a rough idea of what they want to say. Use this as a guide to help you craft a response!";
