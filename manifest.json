@@ -25,6 +25,5 @@
         "js": ["gmailContentScript.js"],
         "css": ["styles.css"],
         "run_at": "document_idle"
-    }],
-    "options_page": "options.html"
+    }]
 }

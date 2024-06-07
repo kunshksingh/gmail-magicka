@@ -140,17 +140,20 @@ function expandEmailItems() {
 
 
 async function generateReply(emailThreadData, user_input) {
-    //const name = "Kunsh Singh" //TODO: Make this dynamic to the user's actual name in storage!
+    let userName;
+    let apiKey;
+
     chrome.storage.sync.get('userName', function(data){
         if(data.userName){
+            console.log('Name found!');
             userName = data.userName;
         }
+        if (!userName) {
+            console.error('Name not found!');
+            alert('Please specify your name in extension settings');
+            return;
+        }
     });
-    if (!userName) {
-        console.error('Nane not found!');
-        alert('Please specify your name in extension settings');
-        return;
-    }
 
     const email = JSON.stringify(emailThreadData);
     const systemPrompt = "You are loved. You are given the following email thread:\n\n"+email+"\nAs "+userName+", reply to the following email thread! Match the tone of voice you've used in the conversation and your intent. Finally and most importantly, the user will provide text for a rough idea of what they want to say. Use this as a guide to help you craft a response!";
@@ -168,12 +171,13 @@ async function generateReply(emailThreadData, user_input) {
         if (data.apiKey) {
             apiKey = data.apiKey;
         }
+        if (!apiKey) {
+            console.error('API Key not found!');
+            alert('API Key not found! Please set your API Key in the extension options.');
+            return;
+        }
     });
-    if (!apiKey) {
-        console.error('API Key not found!');
-        alert('API Key not found! Please set your API Key in the extension options.');
-        return;
-    }
+    
 
     try {
         const response = await fetch(apiUrl, {
